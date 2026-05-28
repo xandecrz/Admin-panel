@@ -3,35 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Admin Panel</title>
 </head>
 <body>
     <div class="container">
         <aside class="sidebar">
-            <div class="logo">
+            <div class="sistem-title">
                 <h2>Admin Panel</h2>
             </div>
 
             <div class="user-info">
-                <img src="https://via.placeholder.com/100" alt="User Avatar">
-                <span>John Doe</span>
-                <div class="status">
-                    <i class="fas fa-cog"></i>
-                    <i>Online</i>
-                    <i>Logout</i>
-                </div>
+                <div class="user-profile">
+                    <img src="img/user.svg" alt="User Profile">
+                    <span>Admin User</span>
+                    <div class="status">
+                        <i>Online |</i>
+                        <i>Logout |</i>
+                        <i>config</i>
+                    </div>
+                </div> 
             </div>
 
-            <ul>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="#">Ventas</a></li>
-                <li><a href="#">Inventario</a></li>
-                <li><a href="#">Mantenimiento</a></li>
-                <li><a href="#">Mercadeo</a></li>
-                <li><a href="#">Contabilidad</a></li>
-                <li><a href="#">Reportes</a></li>
-                <li><a href="#">Settings</a></li>
-            </ul>
+           <nav class="navigation">
+                <ul class="nav-links">
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Sales</a></li>
+                    <li><a href="#">Inventory</a></li>
+                    <li><a href="#">Maintenance</a></li>
+                    <li><a href="#">Marketing</a></li>
+                    <li><a href="#">Accounting</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Settings</a></li>
+                </ul>
+           </nav>
         </aside>
         <main class="main-content">
             <h1>Welcome to the Admin Panel</h1>
@@ -74,6 +79,14 @@
                 </ul>
             </article>
 
+            <article class="card">
+                <h2>Messages</h2>
+                <ul>
+                    <li>Message from support team: "Issue resolved."</li>
+                    <li>Message from marketing team: "New campaign launched."</li>
+                    <li>Message from accounting team: "Invoice #12345 paid."</li>
+                </ul>
+            </article>
         </section>
     </div>
     
