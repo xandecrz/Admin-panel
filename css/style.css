@@ -73,7 +73,7 @@ body{
     list-style: none;
     width: 100%;
     background-color: #555;
-    padding: 15px 5px;
+    padding: 15px ;
     
 }
 .nav-links li a{
@@ -133,6 +133,7 @@ main{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     padding: 20px;
+    height: 100%;
 }
 .card{
     background-color: #fff;
@@ -140,4 +141,32 @@ main{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 20px;
     margin-bottom: 10px;
+}
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card6{
+    background-color: #f3e5f5;
+    grid-column: span 3;
+    grid-row: span 4;
+}
+.card7{
+    background-color: #e0f7fa;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.card8{
+    background-color: #f1f8e9;
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.card h2{
+    margin-bottom: 15px;
+    color: #333;
+}
+.card ul{
+    list-style: none;
+    padding-left: 0;
 }
