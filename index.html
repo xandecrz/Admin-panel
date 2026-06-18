@@ -18,9 +18,9 @@
                     <img src="img/user.svg" alt="User Profile">
                     <span>Admin User</span>
                     <div class="status">
-                        <i>Online |</i>
-                        <i>Logout |</i>
-                        <i>config</i>
+                        <span class="status-icon online">🟢 |</span>
+                        <span class="status-icon offline">🔴 |</span>
+                        <span class="status-icon offline">⚙️</span>
                     </div>
                 </div> 
             </div>
@@ -39,9 +39,22 @@
         </aside>
         <main class="main-content">
             <header class="header">
-                <h1>Dashboard</h1>
+                <h1><span class="menu-icon" onclick="toggleSidebar()">☰</span>Dashboard</h1>
+                <script>
+                    function toggleSidebar() {
+                        const sidebar = document.querySelector('.sidebar');
+                        const span = document.querySelector('.menu-icon');
+                        sidebar.classList.toggle('display: none;');
+                        sidebar
+                        if (sidebar.classList.contains('display: none;')) {
+                            span.textContent = '☰';
+                        } else {
+                            span.textContent = '✖';
+                        }
+                    }
+                </script>
                 <div class="search-bar">
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search..." cliass="search-input">
                     <button type="submit">Search</button>
                 </div>
                 <div class="icons">
@@ -52,7 +65,7 @@
 
             <section class="content">
                 <article class="card card1"> 
-                    <h2>Sales</h2>
+                    <h2><span>📊 </span> Sales</h2>
                     <ul>
                         <li>User John Doe logged in.</li>
                         <li>New order placed by Jane Smith.</li>
@@ -61,14 +74,12 @@
                 </article>
 
                 <article class="card card2">
-                    <h2>Inventory</h2>
-                    <p>Total Sales: $10,000</p>
-                    <p>New Customers: 50</p>
-                    <p>Pending Orders: 5</p>
+                    <h2><span>📦 </span>Inventory</h2>
+                    <h3>100,000</h3>
                 </article>
 
                 <article class="card card3">
-                    <h2>Maintenance</h2>
+                    <h2><span>🔧 </span>Maintenance</h2>
                     <ul>
                         <li>Server maintenance scheduled for tomorrow.</li>
                         <li>New version of the application available.</li>
@@ -77,7 +88,7 @@
                 </article>
 
                 <article class="card card4">
-                    <h2>Marketing</h2>
+                    <h2><span>📢 </span>Marketing</h2>
                     <ul>
                         <li>Review new user registrations.</li>
                         <li>Update product descriptions.</li>
@@ -86,7 +97,7 @@
                 </article>
 
                 <article class="card card5">
-                    <h2>Accounting</h2>
+                    <h2><span>💼 </span>Accounting</h2>
                     <ul>
                         <li>Message from support team: "Issue resolved."</li>
                         <li>Message from marketing team: "New campaign launched."</li>
@@ -94,7 +105,7 @@
                     </ul>
                 </article>
                 <article class="card card6">
-                    <h2>Mi Gráfico de Barras</h2>
+                    <h2><span>📊 </span>Mi Gráfico de Barras</h2>
                     <canvas id="miCanvas" width="400" height="300"></canvas>
 
                     <script>
@@ -119,7 +130,8 @@
                 </article>
 
                 <article class="card card7">
-                    <h2>Tasks</h2>
+                    
+                    <h2><span>✅ </span> Tasks</h2>
                     <ul>
                         <li>Review new user registrations.</li>
                         <li>Update product descriptions.</li>
@@ -128,7 +140,7 @@
                 </article>
 
                 <article class="card card8">
-                    <h2>Messages</h2>
+                    <h2><span>✉️ </span> Messages</h2>
                     <ul>
                         <li>Message from support team: "Issue resolved."</li>
                         <li>Message from marketing team: "New campaign launched."</li>
