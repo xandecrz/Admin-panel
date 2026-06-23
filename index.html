@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,148 +8,139 @@
 </head>
 <body>
     <div class="container">
-        <aside class="sidebar">
+        <aside class="sidebar" id="sidebar">
             <div class="sistem-title">
                 <h2>Admin Panel</h2>
             </div>
 
             <div class="user-info">
                 <div class="user-profile">
-                    <img src="img/user.svg" alt="User Profile">
-                    <span>Admin User</span>
-                    <div class="status">
-                        <span class="status-icon online">🟢 |</span>
-                        <span class="status-icon offline">🔴 |</span>
-                        <span class="status-icon offline">⚙️</span>
+                    <div class="avatar">
+                        <img src="img/user.svg" alt="User Profile">
+                    </div>
+                    <div class="user-meta">
+                        <span class="user-name">Admin User</span>
+                        <span class="user-role">Administrator</span>
                     </div>
                 </div> 
             </div>
            <nav class="navigation">
                 <ul class="nav-links">
-                    <li>🏠<a href="#">Dashboard</a></li>
-                    <li>📊<a href="#">Sales</a></li>
-                    <li>📦<a href="#">Inventory</a></li>
-                    <li>🔧<a href="#">Maintenance</a></li>
-                    <li>📈<a href="#">Marketing</a></li>
-                    <li>💰<a href="#">Accounting</a></li>
-                    <li>📋<a href="#">Reports</a></li>
-                    <li>⚙️<a href="#">Settings</a></li>
+                    <li><a href="#">🏠 Dashboard</a></li>
+                    <li><a href="#">📊 Sales</a></li>
+                    <li><a href="#">📦 Inventory</a></li>
+                    <li><a href="#">🔧 Maintenance</a></li>
+                    <li><a href="#">📈 Marketing</a></li>
+                    <li><a href="#">💰 Accounting</a></li>
+                    <li><a href="#">📋 Reports</a></li>
+                    <li><a href="#">⚙️ Settings</a></li>
                 </ul>
            </nav>
         </aside>
-        <main class="main-content">
+        <main class="main-content" id="main">
             <header class="header">
-                <h1><span class="menu-icon" onclick="toggleSidebar()">☰</span>Dashboard</h1>
-                <script>
-                    function toggleSidebar() {
-                        const sidebar = document.querySelector('.sidebar');
-                        const span = document.querySelector('.menu-icon');
-                        sidebar.classList.toggle('display: none;');
-                        sidebar
-                        if (sidebar.classList.contains('display: none;')) {
-                            span.textContent = '☰';
-                        } else {
-                            span.textContent = '✖';
-                        }
-                    }
-                </script>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search..." cliass="search-input">
-                    <button type="submit">Search</button>
+                <div class="left-header">
+                    <button class="menu-icon" id="menuToggle">☰</button>
+                    <h1>Dashboard</h1>
                 </div>
-                <div class="icons">
-                    <span class="notification-icon">🔔</span>
-                    <span class="message-icon">💬</span>
+                <div class="right-header">
+                    <div class="search-bar">
+                        <input id="searchInput" type="text" placeholder="Buscar..." class="search-input">
+                        <button type="submit">Buscar</button>
+                    </div>
+                    <div class="icons">
+                        <button class="icon-btn">🔔</button>
+                        <button class="icon-btn">💬</button>
+                    </div>
                 </div>
             </header>
 
             <section class="content">
                 <article class="card card1"> 
-                    <h2><span>📊 </span> Sales</h2>
+                    <h2>Sales Overview</h2>
+                    <p class="muted">Últimas actividades</p>
                     <ul>
-                        <li>User John Doe logged in.</li>
-                        <li>New order placed by Jane Smith.</li>
-                        <li>Inventory updated for product XYZ.</li>
+                        <li><h2>$140,000</h2></li>
                     </ul> 
                 </article>
 
                 <article class="card card2">
-                    <h2><span>📦 </span>Inventory</h2>
+                    <h2>Inventory</h2>
                     <h3>100,000</h3>
                 </article>
 
                 <article class="card card3">
-                    <h2><span>🔧 </span>Maintenance</h2>
+                    <h2>Maintenance</h2>
                     <ul>
-                        <li>Server maintenance scheduled for tomorrow.</li>
-                        <li>New version of the application available.</li>
-                        <li>Password will expire in 5 days.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quasi assumenda aliquid repellat quae blanditiis.</li>
                     </ul>
                 </article>
 
                 <article class="card card4">
-                    <h2><span>📢 </span>Marketing</h2>
+                    <h2>Marketing</h2>
                     <ul>
-                        <li>Review new user registrations.</li>
-                        <li>Update product descriptions.</li>
-                        <li>Prepare monthly sales report.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quasi assumenda aliquid repellat quae blanditiis.</li>
                     </ul>
                 </article>
 
                 <article class="card card5">
-                    <h2><span>💼 </span>Accounting</h2>
+                    <h2>Accounting</h2>
                     <ul>
-                        <li>Message from support team: "Issue resolved."</li>
-                        <li>Message from marketing team: "New campaign launched."</li>
-                        <li>Message from accounting team: "Invoice #12345 paid."</li>
-                    </ul>
-                </article>
-                <article class="card card6">
-                    <h2><span>📊 </span>Mi Gráfico de Barras</h2>
-                    <canvas id="miCanvas" width="400" height="300"></canvas>
-
-                    <script>
-                        const canvas = document.getElementById('miCanvas');
-                        const ctx = canvas.getContext('2d');
-
-                        // Datos del gráfico
-                        const datos = [50, 60, 70, 90, 100, 150, 80, 200, 120, 180];
-                        const colores = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33F3', '#33FFF3', '#F333FF', '#FF8C33', '#8C33FF', '#33FF8C'];
-                        const anchoBarra = 50;
-                        const espacio = 20;
-
-                        // Dibujar barras
-                        for (let i = 0; i < datos.length; i++) {
-                            let x = (i * (anchoBarra + espacio)) + 50;
-                            let y = canvas.height - datos[i] - 10;
-                            
-                            ctx.fillStyle = colores[i];
-                            ctx.fillRect(x, y, anchoBarra, datos[i]);
-                        }
-                    </script>
-                </article>
-
-                <article class="card card7">
-                    
-                    <h2><span>✅ </span> Tasks</h2>
-                    <ul>
-                        <li>Review new user registrations.</li>
-                        <li>Update product descriptions.</li>
-                        <li>Prepare monthly sales report.</li>
+                        <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste quasi assumenda aliquid repellat quae blanditiis.</li>
                     </ul>
                 </article>
 
-                <article class="card card8">
-                    <h2><span>✉️ </span> Messages</h2>
-                    <ul>
-                        <li>Message from support team: "Issue resolved."</li>
-                        <li>Message from marketing team: "New campaign launched."</li>
-                        <li>Message from accounting team: "Invoice #12345 paid."</li>
-                    </ul>
+                <article class="card card-chart">
+                    <h2>Ventas por Mes</h2>
+                    <canvas id="salesChart"></canvas>
                 </article>
+
             </section>
         </main>
     </div>
-    
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Sidebar toggle for small screens
+        const menuToggle = document.getElementById('menuToggle');
+        const sidebar = document.getElementById('sidebar');
+        const main = document.getElementById('main');
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('collapsed');
+        });
+
+        // Datos de ejemplo por mes (enero - diciembre)
+        const months = ['Ene','Feb','Mar','Abr','May','Jun','Jul','Ago','Sep','Oct','Nov','Dic'];
+        const sales = [1200, 1900, 1700, 2400, 2200, 3000, 2800, 3200, 2900, 3500, 3700, 4200];
+
+        const ctx = document.getElementById('salesChart').getContext('2d');
+        const salesChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: months,
+                datasets: [{
+                    label: 'Ventas (USD)',
+                    data: sales,
+                    backgroundColor: 'rgba(54, 162, 235, 0.7)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { mode: 'index', intersect: false }
+                }
+            }
+        });
+    </script>
 </body>
 </html>
